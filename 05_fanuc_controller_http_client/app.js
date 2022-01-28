@@ -46,3 +46,5 @@ app.get("/robot/joint_values", (req, res, next) => {
     });
 
 app.listen(PORT); //käynnistetään ohjelma, ottaa porttinumeron 8081 käyttöön
+//http://localhost:8081/robot/joint_values/
+
