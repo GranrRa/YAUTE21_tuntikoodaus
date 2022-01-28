@@ -22,3 +22,5 @@ app.get("/users/active/count", (req, res, next) => {
 
 
 app.listen(PORT); //käynnistetään ohjelma, ottaa porttinumeron 8081 käyttöön
+
+
