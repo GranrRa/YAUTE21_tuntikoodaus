@@ -7,7 +7,7 @@ const io = require("socket.io")(server);
 const PORT = process.env.PORT || 8081;
 
 let connections = [];
-let number_of_connections = 0;
+var number_of_connections = 0;
 
 const broadcast_message = (message)=>{
     for(let id in connections){
@@ -35,6 +35,8 @@ io.on("connection", (socket)=>{
 
     
 });
+
+ 
 
 app.use(express.static("public"));
 

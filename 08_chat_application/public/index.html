@@ -2,16 +2,34 @@
 <html>
 
 <head>
-    <title>Websocket example</title>
+    <title>Rane's Best Chat</title>
     <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
     <script src="client.js"></script>
 
 </head>
 
 <body>
-    <input type="text" id="message_input">
-    <button onclick="send_message()">Send</button>
+    <h1>Keskustele tekniikasta -foorumi</h1>
 
+    <p style="font-weight: bold;">Anna nimi ensin.</p>
+
+
+
+Number of connections:
+<p></p>
+
+
+<meter min="0" low="2" high="5" max="6" value="number_of_connections"></meter>
+<meter min="0" low="2" high="5" max="6" value="3"></meter>
+
+<p ></p>
+    
+    <input type="text" id="name">
+    <button onclick="send_name()">Aseta nimimerkki</button>
+    <p id="names"></p>
+
+    <input type="text" id="message_input">    
+    <button onclick="send_message()">Lähetä</button>
     <p id="messages"></p>
 
 </body>
