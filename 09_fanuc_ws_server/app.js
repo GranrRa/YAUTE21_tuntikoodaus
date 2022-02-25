@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 let connections = [];
 io.on("connection", (socket)=>{
-    connections[socket.id];
+    connections[socket.id] = socket;
 
     socket.on("disconnect", (socket)=>{
         delete connections [socket.id];
@@ -17,12 +17,11 @@ io.on("connection", (socket)=>{
 
 const broadcast_joint_values = (joint_values)=>{
     for(let id in connections){
+        console.log(id);
         const connection = connections[id];
         connection.emit("joint_values", joint_values);
     }
 };
-
-
 
 const get_joint_values = () => {
   return axios
@@ -50,7 +49,7 @@ const main_loop = () => {
 };
 
 main_loop();
-
+console.log("Listening Port: " + PORT);
 
 
 server.listen(PORT);
