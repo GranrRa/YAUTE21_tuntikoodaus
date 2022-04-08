@@ -15,7 +15,7 @@ app.get("/api/alarm/:id", alarm_controller.api_get_alarm);
 app.put("/api/alarm/:id", alarm_controller.api_put_alarm);
 app.delete("/api/alarm/:id", alarm_controller.api_delete_alarm);
 
-const db_uri = "mongodb+srv://db_user:HxK0dIDDkci6Y7la@cluster0.ganue.mongodb.net/alarm_db?retryWrites=true&w=majority";
+const db_uri = "mongodb+srv://db_user:3Ub6iWMa6R4BfV2n@cluster0.xxbvn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 mongoose.connect(db_uri, {}).then(() => {
   console.log("db connected");
