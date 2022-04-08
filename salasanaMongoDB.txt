@@ -1,0 +1,3 @@
+3Ub6iWMa6R4BfV2n
+
+mongodb+srv://db_user:<password>@cluster0.xxbvn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
